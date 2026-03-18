@@ -1,9 +1,6 @@
 // 纯JS版本的面板创建函数
 function createSettingsPanel() {
-    // 1. 检查是否已存在
-    const scriptId = 'my-mvu-script-' + Date.now();
-    if (document.getElementById(scriptId)) return;
-    
+
     // 2. 创建主容器
     const panel = document.createElement('div');
     panel.id = scriptId;
@@ -74,9 +71,6 @@ function createSettingsPanel() {
     const target = document.querySelector('#extensions_settings2, #extensions_settings');
     if (target) {
         target.appendChild(panel);
-        console.log('面板已创建');
+        console.log('wssb');
     }
     
-    // 6. 返回清理函数
-    return () => panel.remove();
-}
